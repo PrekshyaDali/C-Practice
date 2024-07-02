@@ -313,7 +313,8 @@ namespace datatypes
         // finding an element in list
         public void findElement()
         {
-            List<string> names = new List<string> { "Prekshya", "Bitisha", "Avantika" };
+           try{
+             List<string> names = new List<string> { "Prekshya", "Bitisha", "Avantika" };
             string result = names.Find(name => name.StartsWith("P"));
 
             if (result != null)
@@ -324,6 +325,9 @@ namespace datatypes
             {
                 Console.WriteLine("the element is not found");
             }
+           }catch(Exception e){
+            Console.WriteLine("error is occuring", e);
+           }
 
         }
     }
